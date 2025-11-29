@@ -28,7 +28,6 @@ def index():
 
 @app.route("/deliver/<int:row>", methods=["POST"])
 def deliver(row):
-    # 3列目に「配達済み」を記録
     sheet.update_cell(row+2, 3, "配達済み")
     customers = sheet.get_all_records()
     return render_template("index.html", customers=customers)
