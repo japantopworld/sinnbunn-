@@ -1,0 +1,10 @@
+SINNBUNN
+　｜
+　｜
+　｜
+　├──　app.py
+　｜
+　｜
+　└──　templates/
+　　　　　　　└index.html　
+　　

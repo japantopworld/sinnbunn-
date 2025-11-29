@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head><title>新聞配達管理</title></head>
+<body>
+<h1>顧客一覧</h1>
+<ul>
+{% for c in customers %}
+<li>
+{{ c["名前"] }} - {{ c["住所"] }} -
+{% if c["ステータス"] == "配達済み" %}
+✅ 配達済み
+{% else %}
+<form action="/deliver/{{ loop.index0 }}" method="post">
+<button type="submit">配達完了</button>
+</form>
+{% endif %}
+</li>
+{% endfor %}
+</ul>
+</body>
+</html>
